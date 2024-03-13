@@ -11,7 +11,7 @@ df['Price'] = df['Price'].str.replace(',', '').astype(float).astype(int)
 
 # Set page configuration
 st.set_page_config(
-    page_title="Sales Dashboard Report",
+    page_title="Electronics Dashboard Report",
     page_icon=":bar_chart:",
     layout="wide"
 )
@@ -21,30 +21,30 @@ sidebar_menu = st.sidebar.selectbox("Navigation", ["Main", "Data", "Data Analysi
 
 # Main section
 if sidebar_menu == "Main":
-    st.title(":bar_chart: Sales Dashboard Report")
+    st.title(":bar_chart: Electronics Dashboard Report")
     st.markdown("##")
     st.write("""
     Here is the sales data of a particular company that sells electronic Gadgets in different cities of India.
     We have the records from the first week of January 2021 to the last week of December 2021. Our objectives are:
-    (1) Amount of Sales done by each Sales Representative
-    (2) Amount of Productwise sales in each month of the year 2021
-    (3) Amount of sales happened in monthwise of the year 2021
-    (4) Amount of Sales by category
-    (5) Amount of Product sold on a particular day
+   \n (1) Amount of Sales done by each Sales Representative
+    \n(2) Amount of Productwise sales in each month of the year 2021
+    \n(3) Amount of sales happened in monthwise of the year 2021
+    \n(4) Amount of Sales by category
+    \n(5) Amount of Product sold on a particular day
     """)
     st.divider()
 
 # Data section
 elif sidebar_menu == "Data":
     st.markdown("## Data Introduction ")
-    st.write(""" The data contain 
+    st.write(""" The dataset contain 
     dates are in the First Column product 
     name in the second column category in 
     the third column name of sales 
     representative in the fourth column name 
     of city in the fifth column number of 
     units sold in the sixth column unit price 
-    and amount in the third and second  last column & so on ...... There dataset contains 1559 rows and 9 columns""")
+    and amount in the third and second  last column & so on ... There dataset contains 1559 rows and 9 columns""")
     
     # Display data table
     st.write("### Sales Data Table")
